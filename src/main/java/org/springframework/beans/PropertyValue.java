@@ -3,8 +3,6 @@ package org.springframework.beans;
 /**
  * bean属性信息
  *
- * @author derekyi
- * @date 2020/11/23
  */
 public class PropertyValue {
 
