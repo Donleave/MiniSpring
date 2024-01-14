@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanReference.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/PropertyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/InstantiationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/InstantiationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/BeanDefinitionAndBeanDefinitionRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/BeanDefinitionAndBeanDefinitionRegistryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/HelloService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/BeanFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleBeanContainerTest$HelloService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SimpleBeanContainerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +61,29 @@
       <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\ioc" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.beans.factory.config" />
       <recent name="org.springframework.beans" />
       <recent name="org.springframework.beans.factory.support" />
       <recent name="org.springframework.test.ioc" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PopulateBeanWithPropertyValuesTest.testPopulateBeanWithBean">
+    <configuration name="PopulateBeanWithPropertyValuesTest.testPopulateBeanWithBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.PopulateBeanWithPropertyValuesTest" />
+      <option name="METHOD_NAME" value="testPopulateBeanWithBean" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PopulateBeanWithPropertyValuesTest.testPopulateBeanWithPropertyValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -95,6 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PopulateBeanWithPropertyValuesTest.testPopulateBeanWithBean" />
         <item itemvalue="JUnit.PopulateBeanWithPropertyValuesTest.testPopulateBeanWithPropertyValues" />
       </list>
     </recent_temporary>

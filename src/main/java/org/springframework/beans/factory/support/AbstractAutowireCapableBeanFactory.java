@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValue;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.config.BeanReference;
 
 //主要负责实现 Bean 的自动装配功能
 //抽象类中可以不包含抽象方法，也可以包含抽象方法，但含有抽象方法的类一定 是 抽象类。
@@ -41,7 +42,11 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 			for (PropertyValue propertyValue : beanDefinition.getPropertyValues().getPropertyValues()) {
 				String name = propertyValue.getName();
 				Object value = propertyValue.getValue();
-
+				if (value instanceof BeanReference) {
+					// beanA依赖beanB，先实例化beanB
+					BeanReference beanReference = (BeanReference) value;
+					value = getBean(beanReference.getBeanName());
+				}
 				//通过反射设置属性
 				//BeanUtil.setFieldValue 方法使用反射机制，根据属性名在 Bean 实例中找到相应的字段，并将对应的值设置给字段
 				BeanUtil.setFieldValue(bean, name, value);
