@@ -21,7 +21,7 @@ public class BeanDefinition {
 
 	public BeanDefinition(Class beanClass , PropertyValues propertyValues) {
 		this.beanClass = beanClass;
-		this.propertyValues=propertyValues;
+		this.propertyValues=propertyValues!= null ? propertyValues : new PropertyValues();
 	}
 
 	public Class getBeanClass() {
