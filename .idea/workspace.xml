@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/Aware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/BeanFactoryAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationContextAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/ApplicationContextAwareProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/PrototypeBeanTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/prototype-bean.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniSpring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MiniSpring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/service/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Maven/MiniSpring/src/main/java/org/springframework/beans/factory",
+    "last_opened_file_path": "E:/Maven/MiniSpring/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,21 +66,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory" />
       <recent name="E:\Maven\MiniSpring\src\test\resources" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework" />
       <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\ioc" />
       <recent name="E:\Maven\MiniSpring\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.springframework.context.support" />
       <recent name="org.springframework.test.ioc" />
+      <recent name="org.springframework.context.support" />
       <recent name="org.springframework.beans.factory.support" />
       <recent name="org.springframework.beans.factory.config" />
       <recent name="org.springframework.beans.factory.xml" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AwareInterfaceTest.test">
+  <component name="RunManager" selected="JUnit.PrototypeBeanTest.testPrototype">
     <configuration name="ApplicationContextTest.testApplicationContext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -145,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="XmlFileDefineBeanTest.testXmlFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrototypeBeanTest.testPrototype" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +154,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.XmlFileDefineBeanTest" />
-      <option name="METHOD_NAME" value="testXmlFile" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.PrototypeBeanTest" />
+      <option name="METHOD_NAME" value="testPrototype" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrototypeBeanTest.testPrototype" />
         <item itemvalue="JUnit.AwareInterfaceTest.test" />
         <item itemvalue="JUnit.InitAndDestoryMethodTest.testInitAndDestroyMethod" />
         <item itemvalue="JUnit.ApplicationContextTest.testApplicationContext" />
         <item itemvalue="JUnit.BeanFactoryPostProcessorAndBeanPostProcessorTest.testBeanPostProcessor" />
-        <item itemvalue="JUnit.XmlFileDefineBeanTest.testXmlFile" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +186,7 @@
       <workItem from="1705673633564" duration="2966000" />
       <workItem from="1705756051916" duration="2448000" />
       <workItem from="1705844310654" duration="3737000" />
-      <workItem from="1705926955040" duration="1638000" />
+      <workItem from="1705926955040" duration="4576000" />
     </task>
     <servers />
   </component>
@@ -251,12 +251,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>114</line>
+          <line>119</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>96</line>
+          <line>101</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
