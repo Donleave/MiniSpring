@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/FactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/FactoryBeanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/CarFactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/factory-bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/AbstractApplicationEventMulticaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ApplicationContextEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ApplicationEventMulticaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ContextClosedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ContextRefreshedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/SimpleApplicationEventMulticaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/event/ContextClosedEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/event/ContextRefreshedEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/event/CustomEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/event/CustomEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/event-and-event-listener.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractBeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/SingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/SingletonBeanRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,32 +56,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Maven/MiniSpring/src/test/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.13967973&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29089028&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d41d8cd98f00b204e9800998ecf8427e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/Maven/MiniSpring/src/test/java/org/springframework/test/ioc/common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.13967973",
+    "project.structure.side.proportion": "0.29089028",
+    "spring.configuration.checksum": "d41d8cd98f00b204e9800998ecf8427e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\ioc\common" />
       <recent name="E:\Maven\MiniSpring\src\test\resources" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\context" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework" />
-      <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\ioc" />
-      <recent name="E:\Maven\MiniSpring\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.springframework.test.ioc" />
@@ -79,23 +91,7 @@
       <recent name="org.springframework.beans.factory.support" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FactoryBeanTest.testFactoryBean">
-    <configuration name="ApplicationContextTest.testApplicationContext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MiniSpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.springframework.test.ioc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.ApplicationContextTest" />
-      <option name="METHOD_NAME" value="testApplicationContext" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.EventAndEventListenerTest.testEventListener">
     <configuration name="AwareInterfaceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -107,6 +103,22 @@
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
       <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.AwareInterfaceTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventAndEventListenerTest.testEventListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.EventAndEventListenerTest" />
+      <option name="METHOD_NAME" value="testEventListener" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EventAndEventListenerTest.testEventListener" />
         <item itemvalue="JUnit.FactoryBeanTest.testFactoryBean" />
         <item itemvalue="JUnit.PrototypeBeanTest.testPrototype" />
         <item itemvalue="JUnit.AwareInterfaceTest.test" />
         <item itemvalue="JUnit.InitAndDestoryMethodTest.testInitAndDestroyMethod" />
-        <item itemvalue="JUnit.ApplicationContextTest.testApplicationContext" />
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +199,7 @@
       <workItem from="1705844310654" duration="3737000" />
       <workItem from="1705926955040" duration="4576000" />
       <workItem from="1706018833586" duration="2914000" />
+      <workItem from="1706100716075" duration="2375000" />
     </task>
     <servers />
   </component>
@@ -266,7 +279,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>66</line>
+          <line>113</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -276,7 +289,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>33</line>
+          <line>43</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
