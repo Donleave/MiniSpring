@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/DynamicProxyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/DynamicProxyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/ReflectiveMethodInvocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/ReflectiveMethodInvocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/aop/DynamicProxyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/aop/DynamicProxyTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +49,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Maven/MiniSpring/src/main/java/org/springframework",
+    "last_opened_file_path": "E:/Maven/MiniSpring/src/test/java/org/springframework/test/service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.13967973",
     "project.structure.side.proportion": "0.29089028",
     "spring.configuration.checksum": "d41d8cd98f00b204e9800998ecf8427e",
@@ -59,21 +64,37 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\service" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans" />
       <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\ioc\common" />
-      <recent name="E:\Maven\MiniSpring\src\test\resources" />
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\context" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.aop.framework" />
+      <recent name="org.springframework.test.common" />
       <recent name="org.springframework.test.aop" />
       <recent name="org.springframework.test.ioc" />
       <recent name="org.springframework.test.ioc.common" />
-      <recent name="org.springframework.beans.factory" />
-      <recent name="org.springframework.context.support" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DynamicProxyTest.testJdkDynamicProxy">
+  <component name="RunManager" selected="JUnit.DynamicProxyTest.testCglibDynamicProxy">
+    <configuration name="DynamicProxyTest.testCglibDynamicProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.DynamicProxyTest" />
+      <option name="METHOD_NAME" value="testCglibDynamicProxy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DynamicProxyTest.testJdkDynamicProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -138,29 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrototypeBeanTest.testPrototype" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MiniSpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.springframework.test.ioc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.PrototypeBeanTest" />
-      <option name="METHOD_NAME" value="testPrototype" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicProxyTest.testCglibDynamicProxy" />
         <item itemvalue="JUnit.DynamicProxyTest.testJdkDynamicProxy" />
         <item itemvalue="JUnit.PointcutExpressionTest.testPointcutExpression" />
         <item itemvalue="JUnit.EventAndEventListenerTest.testEventListener" />
         <item itemvalue="JUnit.FactoryBeanTest.testFactoryBean" />
-        <item itemvalue="JUnit.PrototypeBeanTest.testPrototype" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +187,7 @@
       <workItem from="1705926955040" duration="4576000" />
       <workItem from="1706018833586" duration="2914000" />
       <workItem from="1706100716075" duration="2938000" />
-      <workItem from="1706241807036" duration="2696000" />
+      <workItem from="1706241807036" duration="4504000" />
     </task>
     <servers />
   </component>
