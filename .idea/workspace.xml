@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/ClassFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/MethodMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/Pointcut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/aspectj/AspectJExpressionPointcut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/event/CustomEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/event/CustomEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,25 +66,25 @@
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\context" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.test.aop" />
       <recent name="org.springframework.test.ioc" />
       <recent name="org.springframework.test.ioc.common" />
       <recent name="org.springframework.beans.factory" />
       <recent name="org.springframework.context.support" />
-      <recent name="org.springframework.beans.factory.support" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PointcutExpressionTest.testPointcutExpression">
-    <configuration name="AwareInterfaceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DynamicProxyTest.testJdkDynamicProxy">
+    <configuration name="DynamicProxyTest.testJdkDynamicProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="PATTERN" value="org.springframework.test.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.AwareInterfaceTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.DynamicProxyTest" />
+      <option name="METHOD_NAME" value="testJdkDynamicProxy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicProxyTest.testJdkDynamicProxy" />
         <item itemvalue="JUnit.PointcutExpressionTest.testPointcutExpression" />
         <item itemvalue="JUnit.EventAndEventListenerTest.testEventListener" />
         <item itemvalue="JUnit.FactoryBeanTest.testFactoryBean" />
         <item itemvalue="JUnit.PrototypeBeanTest.testPrototype" />
-        <item itemvalue="JUnit.AwareInterfaceTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +182,7 @@
       <workItem from="1705926955040" duration="4576000" />
       <workItem from="1706018833586" duration="2914000" />
       <workItem from="1706100716075" duration="2938000" />
-      <workItem from="1706241807036" duration="1836000" />
+      <workItem from="1706241807036" duration="2696000" />
     </task>
     <servers />
   </component>
@@ -241,7 +236,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/common/CustomerBeanPostProcessor.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/common/CustomerBeanPostProcessor.java</url>
           <line>13</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
