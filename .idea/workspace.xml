@@ -78,7 +78,7 @@
       <recent name="org.springframework.test.ioc.common" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DynamicProxyTest.testCglibDynamicProxy">
+  <component name="RunManager" selected="JUnit.DynamicProxyTest.testProxyFactory">
     <configuration name="DynamicProxyTest.testCglibDynamicProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -111,6 +111,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DynamicProxyTest.testProxyFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.DynamicProxyTest" />
+      <option name="METHOD_NAME" value="testProxyFactory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EventAndEventListenerTest.testEventListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -122,22 +138,6 @@
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
       <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.EventAndEventListenerTest" />
       <option name="METHOD_NAME" value="testEventListener" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FactoryBeanTest.testFactoryBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MiniSpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.springframework.test.ioc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.FactoryBeanTest" />
-      <option name="METHOD_NAME" value="testFactoryBean" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicProxyTest.testProxyFactory" />
         <item itemvalue="JUnit.DynamicProxyTest.testCglibDynamicProxy" />
         <item itemvalue="JUnit.DynamicProxyTest.testJdkDynamicProxy" />
         <item itemvalue="JUnit.PointcutExpressionTest.testPointcutExpression" />
         <item itemvalue="JUnit.EventAndEventListenerTest.testEventListener" />
-        <item itemvalue="JUnit.FactoryBeanTest.testFactoryBean" />
       </list>
     </recent_temporary>
   </component>
