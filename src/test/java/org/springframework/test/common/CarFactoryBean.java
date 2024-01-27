@@ -3,7 +3,6 @@ package org.springframework.test.common;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.test.bean.Car;
 
-
 public class CarFactoryBean implements FactoryBean<Car> {
 
 	private String brand;
