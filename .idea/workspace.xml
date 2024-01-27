@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/aspectj/AspectJExpressionPointcutAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/aspectj/AspectJExpressionPointcutAdvisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/DynamicProxyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/DynamicProxyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Maven/MiniSpring/src/main/java/org/springframework/aop",
+    "last_opened_file_path": "E:/Maven/MiniSpring/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,21 +59,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Maven\MiniSpring\src\test\resources" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop\framework" />
       <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\service" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework" />
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.test.aop" />
+      <recent name="org.springframework.beans.factory.config" />
+      <recent name="org.springframework.aop.framework.autoproxy" />
       <recent name="org.springframework.aop.aspectj" />
       <recent name="org.springframework.test.common" />
-      <recent name="org.springframework.aop.adapter" />
-      <recent name="org.springframework.aop.framework" />
-      <recent name="org.springframework.test.aop" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AutoProxyTest.testAutoProxy">
+  <component name="RunManager" selected="JUnit.PropertyPlaceholderConfigurerTest.test">
     <configuration name="AutoProxyTest.testAutoProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -124,22 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProxyTest.testJdkDynamicProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MiniSpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.springframework.test.aop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.DynamicProxyTest" />
-      <option name="METHOD_NAME" value="testJdkDynamicProxy" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DynamicProxyTest.testProxyFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -156,13 +138,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PropertyPlaceholderConfigurerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.expanding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.expanding" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.expanding.PropertyPlaceholderConfigurerTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PropertyPlaceholderConfigurerTest.test" />
         <item itemvalue="JUnit.AutoProxyTest.testAutoProxy" />
         <item itemvalue="JUnit.DynamicProxyTest.testBeforeAdvice" />
         <item itemvalue="JUnit.DynamicProxyTest.testProxyFactory" />
         <item itemvalue="JUnit.DynamicProxyTest.testCglibDynamicProxy" />
-        <item itemvalue="JUnit.DynamicProxyTest.testJdkDynamicProxy" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +183,7 @@
       <workItem from="1706018833586" duration="2914000" />
       <workItem from="1706100716075" duration="2938000" />
       <workItem from="1706241807036" duration="5737000" />
-      <workItem from="1706327180973" duration="2949000" />
+      <workItem from="1706327180973" duration="3852000" />
     </task>
     <servers />
   </component>
@@ -250,12 +248,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>119</line>
+          <line>150</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>101</line>
+          <line>132</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
