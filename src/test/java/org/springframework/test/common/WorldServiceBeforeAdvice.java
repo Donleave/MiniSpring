@@ -4,10 +4,7 @@ import org.springframework.aop.MethodBeforeAdvice;
 
 import java.lang.reflect.Method;
 
-/**
- * @author derekyi
- * @date 2020/12/6
- */
+ 
 public class WorldServiceBeforeAdvice implements MethodBeforeAdvice {
 
 	@Override

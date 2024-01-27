@@ -4,10 +4,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.MethodBeforeAdvice;
 
-/**
- * @author derekyi
- * @date 2020/12/6
- */
+ 
 public class MethodBeforeAdviceInterceptor implements MethodInterceptor {
 
 	private MethodBeforeAdvice advice;

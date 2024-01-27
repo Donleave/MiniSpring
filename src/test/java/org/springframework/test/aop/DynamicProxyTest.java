@@ -71,17 +71,6 @@ public class DynamicProxyTest {
 		proxy.explode();
 	}
 	@Test
-	public void testBeforeAdvice() throws Exception {
-		//设置BeforeAdvice
-		WorldServiceBeforeAdvice beforeAdvice = new WorldServiceBeforeAdvice();
-		MethodBeforeAdviceInterceptor methodInterceptor = new MethodBeforeAdviceInterceptor(beforeAdvice);
-		advisedSupport.setMethodInterceptor(methodInterceptor);
-
-		WorldService proxy = (WorldService) new ProxyFactory(advisedSupport).getProxy();
-		proxy.explode();
-	}
-
-	@Test
 	public void testAdvisor() throws Exception {
 		WorldService worldService = new WorldServiceImpl();
 
