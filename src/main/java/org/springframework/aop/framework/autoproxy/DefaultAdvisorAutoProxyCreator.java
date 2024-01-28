@@ -6,6 +6,7 @@ import org.springframework.aop.*;
 import org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -52,6 +53,20 @@ public class DefaultAdvisorAutoProxyCreator implements InstantiationAwareBeanPos
 		return null;
 	}
 
+	/**
+	 * bean实例化之后，设置属性之前执行
+	 *
+	 * @param pvs
+	 * @param bean
+	 * @param beanName
+	 * @return
+	 * @throws BeansException
+	 */
+	@Override
+	public PropertyValues postProcessPropertyValues(PropertyValues pvs, Object bean, String beanName) throws BeansException {
+		return pvs;
+	}
+
 	private boolean isInfrastructureClass(Class<?> beanClass) {
 		return Advice.class.isAssignableFrom(beanClass)
 				|| Pointcut.class.isAssignableFrom(beanClass)
@@ -68,8 +83,17 @@ public class DefaultAdvisorAutoProxyCreator implements InstantiationAwareBeanPos
 		return bean;
 	}
 
+	/**
+	 * 在bean执行初始化方法之后执行此方法
+	 *
+	 * @param bean
+	 * @param beanName
+	 * @return
+	 * @throws BeansException
+	 */
 	@Override
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		return bean;
 	}
+
 }

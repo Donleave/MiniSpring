@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/annotation/Scope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/stereotype/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/package-scan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/Value.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/util/StringValueResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ValueAnnotationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/value-annotation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/PropertyPlaceholderConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/PropertyPlaceholderConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/bean/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/bean/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,20 +75,20 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Maven\MiniSpring\src\test\resources" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory\annotation" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\context" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop\framework" />
-      <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.test.ioc" />
+      <recent name="org.springframework.util" />
+      <recent name="org.springframework.test.bean" />
       <recent name="org.springframework.stereotype" />
       <recent name="org.springframework.test.expanding" />
-      <recent name="org.springframework.beans.factory" />
-      <recent name="org.springframework.test.aop" />
-      <recent name="org.springframework.beans.factory.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PackageScanTest.testScanPackage">
+  <component name="RunManager" selected="JUnit.ValueAnnotationTest.testValueAnnotation">
     <configuration name="AutoProxyTest.testAutoProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -91,38 +100,6 @@
       <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
       <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.AutoProxyTest" />
       <option name="METHOD_NAME" value="testAutoProxy" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DynamicProxyTest.testBeforeAdvice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MiniSpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.springframework.test.aop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.DynamicProxyTest" />
-      <option name="METHOD_NAME" value="testBeforeAdvice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DynamicProxyTest.testProxyFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MiniSpring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.springframework.test.aop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.DynamicProxyTest" />
-      <option name="METHOD_NAME" value="testProxyFactory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,13 +137,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ValueAnnotationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.ValueAnnotationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValueAnnotationTest.testValueAnnotation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MiniSpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.ValueAnnotationTest" />
+      <option name="METHOD_NAME" value="testValueAnnotation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ValueAnnotationTest.testValueAnnotation" />
+        <item itemvalue="JUnit.ValueAnnotationTest" />
         <item itemvalue="JUnit.PackageScanTest.testScanPackage" />
         <item itemvalue="JUnit.PropertyPlaceholderConfigurerTest.test" />
         <item itemvalue="JUnit.AutoProxyTest.testAutoProxy" />
-        <item itemvalue="JUnit.DynamicProxyTest.testBeforeAdvice" />
-        <item itemvalue="JUnit.DynamicProxyTest.testProxyFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +197,8 @@
       <workItem from="1706018833586" duration="2914000" />
       <workItem from="1706100716075" duration="2938000" />
       <workItem from="1706241807036" duration="5737000" />
-      <workItem from="1706327180973" duration="5614000" />
+      <workItem from="1706327180973" duration="5914000" />
+      <workItem from="1706447921908" duration="1744000" />
     </task>
     <servers />
   </component>
@@ -254,17 +263,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>150</line>
+          <line>174</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>132</line>
+          <line>156</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java</url>
-          <line>81</line>
+          <line>86</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
