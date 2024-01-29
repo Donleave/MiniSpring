@@ -59,6 +59,19 @@ public class AutowiredAnnotationBeanPostProcessor implements InstantiationAwareB
 		return pvs;
 	}
 
+	/**
+	 * bean实例化之后，设置属性之前执行
+	 *
+	 * @param bean
+	 * @param beanName
+	 * @return
+	 * @throws BeansException
+	 */
+	@Override
+	public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
+		return true;
+	}
+
 	@Override
 	public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
 		return null;
