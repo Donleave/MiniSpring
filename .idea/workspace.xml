@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/ConversionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/Converter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/GenericConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/DefaultConversionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/GenericConversionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/StringToNumberConverterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/StringToBooleanConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/StringToIntegerConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/TypeConversionFirstPartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/ConversionServiceFactoryBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/Autowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/Autowired.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/AutowiredAnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/AutowiredAnnotationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ValueAnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ValueAnnotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/BeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,14 +73,14 @@
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\context" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.context.support" />
       <recent name="org.springframework.test.ioc" />
       <recent name="org.springframework.util" />
       <recent name="org.springframework.test.bean" />
       <recent name="org.springframework.stereotype" />
-      <recent name="org.springframework.test.expanding" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TypeConversionFirstPartTest">
+  <component name="RunManager" selected="JUnit.TypeConversionSecondPartTest">
     <configuration name="AutoProxyTest.testPopulateProxyBeanWithPropertyValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -151,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValueAnnotationTest.testValueAnnotation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TypeConversionSecondPartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
@@ -160,20 +153,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.ValueAnnotationTest" />
-      <option name="METHOD_NAME" value="testValueAnnotation" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.TypeConversionSecondPartTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TypeConversionSecondPartTest" />
         <item itemvalue="JUnit.TypeConversionFirstPartTest" />
         <item itemvalue="JUnit.TypeConversionFirstPartTest.testStringToIntegerConverter" />
         <item itemvalue="JUnit.AutoProxyTest.testPopulateProxyBeanWithPropertyValues" />
         <item itemvalue="JUnit.AutowiredAnnotationTest.testAutowiredAnnotation" />
-        <item itemvalue="JUnit.ValueAnnotationTest.testValueAnnotation" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +190,7 @@
       <workItem from="1706241807036" duration="5737000" />
       <workItem from="1706327180973" duration="5914000" />
       <workItem from="1706447921908" duration="3416000" />
-      <workItem from="1706498468258" duration="4228000" />
+      <workItem from="1706498468258" duration="5846000" />
     </task>
     <servers />
   </component>
@@ -263,22 +255,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>201</line>
+          <line>213</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>183</line>
+          <line>195</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java</url>
-          <line>86</line>
+          <line>96</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>113</line>
+          <line>134</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -288,7 +280,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>43</line>
+          <line>47</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
