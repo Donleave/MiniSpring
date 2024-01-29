@@ -6,9 +6,7 @@ import org.springframework.test.bean.Car;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- 
- */
+  
 public class ValueAnnotationTest {
 
 	@Test

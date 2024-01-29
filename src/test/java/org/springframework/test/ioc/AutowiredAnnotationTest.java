@@ -6,9 +6,7 @@ import org.springframework.test.bean.Person;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- 
- */
+  
 public class AutowiredAnnotationTest {
 
 	@Test

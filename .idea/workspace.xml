@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/ConversionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/Converter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/GenericConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/DefaultConversionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/GenericConversionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/StringToNumberConverterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/StringToBooleanConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/StringToIntegerConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/TypeConversionFirstPartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/AutoProxyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/AutoProxyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/service/WorldService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/service/WorldService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/service/WorldServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/service/WorldServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/Autowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/annotation/Autowired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/AutowiredAnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/AutowiredAnnotationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ValueAnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ValueAnnotationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,32 +52,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Maven/MiniSpring/src/test/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.13967973&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29089028&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d41d8cd98f00b204e9800998ecf8427e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/Maven/MiniSpring/src/test/java/org/springframework/test/common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.13967973",
+    "project.structure.side.proportion": "0.29089028",
+    "spring.configuration.checksum": "d41d8cd98f00b204e9800998ecf8427e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\common" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\core\convert" />
       <recent name="E:\Maven\MiniSpring\src\test\resources" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory\annotation" />
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\context" />
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop" />
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop\framework" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.springframework.test.ioc" />
@@ -80,7 +87,7 @@
       <recent name="org.springframework.test.expanding" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AutoProxyTest.testPopulateProxyBeanWithPropertyValues">
+  <component name="RunManager" selected="JUnit.TypeConversionFirstPartTest">
     <configuration name="AutoProxyTest.testPopulateProxyBeanWithPropertyValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
@@ -113,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PackageScanTest.testScanPackage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TypeConversionFirstPartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +129,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.PackageScanTest" />
-      <option name="METHOD_NAME" value="testScanPackage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.TypeConversionFirstPartTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValueAnnotationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TypeConversionFirstPartTest.testStringToIntegerConverter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +144,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.ValueAnnotationTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.TypeConversionFirstPartTest" />
+      <option name="METHOD_NAME" value="testStringToIntegerConverter" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TypeConversionFirstPartTest" />
+        <item itemvalue="JUnit.TypeConversionFirstPartTest.testStringToIntegerConverter" />
         <item itemvalue="JUnit.AutoProxyTest.testPopulateProxyBeanWithPropertyValues" />
         <item itemvalue="JUnit.AutowiredAnnotationTest.testAutowiredAnnotation" />
         <item itemvalue="JUnit.ValueAnnotationTest.testValueAnnotation" />
-        <item itemvalue="JUnit.ValueAnnotationTest" />
-        <item itemvalue="JUnit.PackageScanTest.testScanPackage" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +198,7 @@
       <workItem from="1706241807036" duration="5737000" />
       <workItem from="1706327180973" duration="5914000" />
       <workItem from="1706447921908" duration="3416000" />
-      <workItem from="1706498468258" duration="2127000" />
+      <workItem from="1706498468258" duration="4228000" />
     </task>
     <servers />
   </component>
