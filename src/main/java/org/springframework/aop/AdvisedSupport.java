@@ -3,18 +3,20 @@ package org.springframework.aop;
 import org.aopalliance.intercept.MethodInterceptor;
 
 /**
- *AOP代理配置管理器的基类
+ * @author derekyi
+ * @date 2020/12/6
  */
 public class AdvisedSupport {
 
 	//是否使用cglib代理
-	private boolean proxyTargetClass = false;
+	private boolean proxyTargetClass = true;
 
 	private TargetSource targetSource;
 
 	private MethodInterceptor methodInterceptor;
 
 	private MethodMatcher methodMatcher;
+
 	public boolean isProxyTargetClass() {
 		return proxyTargetClass;
 	}
