@@ -16,10 +16,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author derekyi
- * @date 2020/12/6
- */
+ 
 public class DefaultAdvisorAutoProxyCreator implements InstantiationAwareBeanPostProcessor, BeanFactoryAware {
 
 	private DefaultListableBeanFactory beanFactory;

@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/ObjectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/ABeforeAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/CircularReferenceWithProxyBeanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/circular-reference-with-proxy-bean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/AdvisedSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/AdvisedSupport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/InitAndDestoryMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/InitAndDestoryMethodTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultListableBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultListableBeanFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/InitAndDestoryMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/InitAndDestoryMethodTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +67,11 @@
       <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory\annotation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.springframework.aop" />
+      <recent name="org.springframework.aop.framework" />
+      <recent name="org.springframework.aop.framework.autoproxy" />
       <recent name="org.springframework.beans.factory.support" />
       <recent name="org.springframework.context.support" />
-      <recent name="org.springframework.aop.framework.autoproxy" />
-      <recent name="org.springframework.test.common" />
-      <recent name="org.springframework.test.ioc" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CircularReferenceWithProxyBeanTest.testCircularReference">
@@ -199,7 +184,7 @@
       <workItem from="1706327180973" duration="5914000" />
       <workItem from="1706447921908" duration="3416000" />
       <workItem from="1706498468258" duration="8029000" />
-      <workItem from="1706587308931" duration="4932000" />
+      <workItem from="1706587308931" duration="5711000" />
     </task>
     <servers />
   </component>

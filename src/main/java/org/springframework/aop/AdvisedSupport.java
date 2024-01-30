@@ -2,10 +2,7 @@ package org.springframework.aop;
 
 import org.aopalliance.intercept.MethodInterceptor;
 
-/**
- * @author derekyi
- * @date 2020/12/6
- */
+ 
 public class AdvisedSupport {
 
 	//是否使用cglib代理
