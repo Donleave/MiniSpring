@@ -6,6 +6,7 @@ import net.sf.cglib.proxy.MethodProxy;
 import org.springframework.aop.AdvisedSupport;
 
 import java.lang.reflect.Method;
+import java.util.List;
 
 /**
  * cgli动态代理
@@ -22,7 +23,9 @@ public class CglibAopProxy implements AopProxy {
 
 	@Override
 	public Object getProxy() {
+		// 创建动态代理增强类
 		Enhancer enhancer = new Enhancer();
+		//创建 Enhancer 实例并设置其父类（superclass）为目标对象的类
 		enhancer.setSuperclass(advised.getTargetSource().getTarget().getClass());
 		enhancer.setInterfaces(advised.getTargetSource().getTargetClass());
 		enhancer.setCallback(new DynamicAdvisedInterceptor(advised));
@@ -41,13 +44,18 @@ public class CglibAopProxy implements AopProxy {
 		}
 
 		@Override
-		public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-			CglibMethodInvocation methodInvocation = new CglibMethodInvocation(advised.getTargetSource().getTarget(), method, objects, methodProxy);
-			if (advised.getMethodMatcher().matches(method, advised.getTargetSource().getTarget().getClass())) {
-				//代理方法
-				return advised.getMethodInterceptor().invoke(methodInvocation);
-			}
-			return methodInvocation.proceed();
+		public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+			// 获取目标对象
+			Object target=advised.getTargetSource().getTarget();
+			Class<?> targetClass = target.getClass();
+			Object retVal = null;
+			List<Object> chain = this.advised.getInterceptorsAndDynamicInterceptionAdvice(method, targetClass);
+			CglibMethodInvocation methodInvocation = new CglibMethodInvocation(proxy, target, method, args, targetClass, chain, methodProxy);
+			if(chain==null||chain.isEmpty()){
+				//如果拦截器链为空，就执行目标对象的方法，否则执行拦截器链中的方法
+				retVal =methodProxy.invoke(target, args);
+			}else retVal=methodInvocation.proceed();
+			return retVal;
 		}
 	}
 
@@ -55,14 +63,16 @@ public class CglibAopProxy implements AopProxy {
 
 		private final MethodProxy methodProxy;
 
-		public CglibMethodInvocation(Object target, Method method, Object[] arguments, MethodProxy methodProxy) {
-			super(target, method, arguments);
+		public CglibMethodInvocation(Object proxy, Object target, Method method,
+		                             Object[] arguments, Class<?> targetClass,
+		                             List<Object> interceptorsAndDynamicMethodMatchers, MethodProxy methodProxy) {
+			super(proxy, target, method, arguments, targetClass, interceptorsAndDynamicMethodMatchers);
 			this.methodProxy = methodProxy;
 		}
 
 		@Override
 		public Object proceed() throws Throwable {
-			return this.methodProxy.invoke(this.target, this.arguments);
+			return super.proceed();
 		}
 	}
 }

@@ -4,10 +4,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 
-/**
- * @author derekyi
- * @date 2020/11/26
- */
+
 
 //使用抽象实现类的一个优点是,当有多个类需要实现同一个接口时，可以将一些通用的实现逻辑放在抽象实现类中，
 // 避免在每个具体实现类中重复编写相同的代码。

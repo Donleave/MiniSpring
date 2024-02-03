@@ -3,10 +3,7 @@ package org.springframework.core.convert.support;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
 
-/**
- * @author derekyi
- * @date 2021/1/10
- */
+
 public class StringToNumberConverterFactory implements ConverterFactory<String, Number> {
 
 	@Override

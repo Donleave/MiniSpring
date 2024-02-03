@@ -7,10 +7,7 @@ import org.springframework.beans.factory.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public class CustomBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
 	@Override

@@ -3,10 +3,7 @@ package org.springframework.context.support;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public abstract class AbstractRefreshableApplicationContext extends AbstractApplicationContext {
 
 	private DefaultListableBeanFactory beanFactory;

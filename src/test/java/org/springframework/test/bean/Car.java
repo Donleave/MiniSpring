@@ -3,12 +3,10 @@ package org.springframework.test.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
-/**
- * @author derekyi
- * @date 2020/11/24
- */
+
 @Component
 public class Car {
 
@@ -18,7 +16,7 @@ public class Car {
 
 	@Value("${brand}")
 	private String brand;
-
+	private long date;
 	public String getBrand() {
 		return brand;
 	}
@@ -43,7 +41,13 @@ public class Car {
 		this.produceDate = produceDate;
 	}
 
-
+	public void init(){
+		date=System.currentTimeMillis();
+	}
+	public void showTime(){
+		SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
+		System.out.println(date+":bean create");
+	}
 
 	@Override
 	public String toString() {

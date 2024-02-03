@@ -9,10 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author derekyi
- * @date 2020/11/22
- */
+
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 
 	//一级缓存

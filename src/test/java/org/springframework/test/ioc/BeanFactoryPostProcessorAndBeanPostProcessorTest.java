@@ -10,10 +10,7 @@ import org.springframework.test.common.CustomerBeanPostProcessor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public class BeanFactoryPostProcessorAndBeanPostProcessorTest {
 
 	@Test

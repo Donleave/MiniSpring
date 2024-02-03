@@ -28,6 +28,8 @@ public class BeanDefinition {
 
 	private boolean prototype = false;
 
+	private boolean lazyInit=false;
+
 	public BeanDefinition(Class beanClass ) {
 		//调用了下面这个构造函数
 		this(beanClass,null);
@@ -80,5 +82,12 @@ public class BeanDefinition {
 
 	public void setDestroyMethodName(String destroyMethodName) {
 		this.destroyMethodName = destroyMethodName;
+	}
+	public void setLazyInit(boolean b){
+		lazyInit=b;
+	}
+
+	public boolean isLazyInit(){
+		return lazyInit;
 	}
 }

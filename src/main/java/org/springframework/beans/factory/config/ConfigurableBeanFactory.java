@@ -4,10 +4,7 @@ import org.springframework.beans.factory.HierarchicalBeanFactory;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.util.StringValueResolver;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry {
 	/**
 	 * @param beanPostProcessor

@@ -5,8 +5,6 @@ import org.springframework.beans.BeansException;
 /**
  * xml文件的应用上下文
  *
- * @author derekyi
- * @date 2020/11/28
  */
 public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext {
 

@@ -4,10 +4,7 @@ import org.springframework.beans.BeansException;
 
 import java.util.Map;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public interface ListableBeanFactory extends BeanFactory {
 
 	/**

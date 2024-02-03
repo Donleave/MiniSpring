@@ -4,10 +4,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.test.bean.Car;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public class CustomerBeanPostProcessor implements BeanPostProcessor {
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {

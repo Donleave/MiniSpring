@@ -8,10 +8,7 @@ import org.springframework.test.bean.Person;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author derekyi
- * @date 2020/11/26
- */
+
 public class XmlFileDefineBeanTest {
 
 	@Test

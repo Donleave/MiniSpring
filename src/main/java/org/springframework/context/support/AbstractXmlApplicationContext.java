@@ -3,10 +3,7 @@ package org.springframework.context.support;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
-/**
- * @author derekyi
- * @date 2020/11/28
- */
+
 public abstract class AbstractXmlApplicationContext extends AbstractRefreshableApplicationContext {
 
 	protected void loadBeanDefinitions(DefaultListableBeanFactory beanFactory) {

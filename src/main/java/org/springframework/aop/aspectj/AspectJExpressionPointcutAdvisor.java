@@ -7,8 +7,6 @@ import org.springframework.aop.PointcutAdvisor;
 /**
  * aspectJ表达式的advisor
  *
- * @author derekyi
- * @date 2020/12/6
  */
 public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
 

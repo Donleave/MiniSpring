@@ -3,8 +3,6 @@ package org.springframework.core.convert;
 /**
  * 类型转换抽象接口
  *
- * @author derekyi
- * @date 2021/1/10
  */
 public interface ConversionService {
 

@@ -20,8 +20,6 @@ import java.util.Map;
 /**
  * 抽象应用上下文
  *
- * @author derekyi
- * @date 2020/11/28
  */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
@@ -114,7 +112,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
 
 	/**
 	 * 在bean实例化之前，执行BeanFactoryPostProcessor
-	 *
+	 * 根据注册在Bean工厂的bean的类型来找出BeanFactoryPostProcessor集合，遍历执行
 	 * @param beanFactory
 	 */
 	protected void invokeBeanFactoryPostProcessors(ConfigurableListableBeanFactory beanFactory) {

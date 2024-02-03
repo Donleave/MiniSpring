@@ -6,10 +6,7 @@ import org.springframework.test.service.HelloService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author derekyi
- * @date 2020/12/1
- */
+
 public class AwareInterfaceTest {
 
 	@Test

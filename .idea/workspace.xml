@@ -4,10 +4,125 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="解决循环依赖问题（二）：有代理对象">
+    <list default="true" id="c167be1e-4aae-48b9-8eb6-885c9947af95" name="Changes" comment="实现最简单的IOC容器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/AfterAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/AfterReturningAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/AdvisorChainFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/adapter/AfterReturningAdviceInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/ProxyFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/WorldServiceAfterReturnAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/LazyInitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/lazy-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/AdvisedSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/AdvisedSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/Pointcut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/Pointcut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/TargetSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/TargetSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/aspectj/AspectJExpressionPointcutAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/aspectj/AspectJExpressionPointcutAdvisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/AopProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/AopProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/ProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/HierarchicalBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/HierarchicalBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/ListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/ListableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/BeanReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/BeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/BeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/ConfigurableApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/ConfigurableApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/AbstractApplicationEventMulticaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/AbstractApplicationEventMulticaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ApplicationContextEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ApplicationContextEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ApplicationEventMulticaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ApplicationEventMulticaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ContextClosedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ContextClosedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ContextRefreshedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/ContextRefreshedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/SimpleApplicationEventMulticaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/event/SimpleApplicationEventMulticaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractRefreshableApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractRefreshableApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/ApplicationContextAwareProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/ApplicationContextAwareProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/ConversionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/ConversionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/converter/ConverterRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/StringToNumberConverterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/core/convert/support/StringToNumberConverterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/DynamicProxyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/aop/DynamicProxyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/bean/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/bean/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/ABeforeAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/ABeforeAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/CustomBeanFactoryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/CustomBeanFactoryPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/CustomerBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/CustomerBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/event/ContextClosedEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/event/ContextClosedEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/event/ContextRefreshedEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/event/ContextRefreshedEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/event/CustomEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/common/event/CustomEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ApplicationContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/AwareInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/AwareInterfaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/BeanDefinitionAndBeanDefinitionRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/BeanDefinitionAndBeanDefinitionRegistryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/BeanFactoryPostProcessorAndBeanPostProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/BeanFactoryPostProcessorAndBeanPostProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/CircularReferenceWithProxyBeanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/CircularReferenceWithProxyBeanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/EventAndEventListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/EventAndEventListenerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/XmlFileDefineBeanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/XmlFileDefineBeanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/springframework/test/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/springframework/test/service/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/auto-proxy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/auto-proxy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/AdvisedSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/AdvisedSupport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/TargetSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/TargetSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/aspectj/AspectJExpressionPointcutAdvisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/aspectj/AspectJExpressionPointcutAdvisor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/CglibAopProxy$CglibMethodInvocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/CglibAopProxy$CglibMethodInvocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/CglibAopProxy$DynamicAdvisedInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/CglibAopProxy$DynamicAdvisedInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/CglibAopProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/CglibAopProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/JdkDynamicAopProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/JdkDynamicAopProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/ProxyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/ProxyFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/ReflectiveMethodInvocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/ReflectiveMethodInvocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/config/BeanDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/config/BeanDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/config/BeanReference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/config/BeanReference.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultListableBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultListableBeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/event/AbstractApplicationEventMulticaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/event/AbstractApplicationEventMulticaster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/event/ApplicationContextEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/event/ApplicationContextEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/event/ContextClosedEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/event/ContextClosedEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/event/ContextRefreshedEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/event/ContextRefreshedEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/event/SimpleApplicationEventMulticaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/event/SimpleApplicationEventMulticaster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractApplicationContext$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractApplicationContext$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractRefreshableApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractRefreshableApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractXmlApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/support/AbstractXmlApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/support/ApplicationContextAwareProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/support/ApplicationContextAwareProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/context/support/ClassPathXmlApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/context/support/ClassPathXmlApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/core/convert/support/StringToNumberConverterFactory$StringToNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/core/convert/support/StringToNumberConverterFactory$StringToNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/springframework/core/convert/support/StringToNumberConverterFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/springframework/core/convert/support/StringToNumberConverterFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/auto-proxy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/auto-proxy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/aop/DynamicProxyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/aop/DynamicProxyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/bean/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/bean/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/ABeforeAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/ABeforeAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/CustomBeanFactoryPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/CustomBeanFactoryPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/CustomerBeanPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/CustomerBeanPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/event/ContextClosedEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/event/ContextClosedEventListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/event/ContextRefreshedEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/event/ContextRefreshedEventListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/event/CustomEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/common/event/CustomEventListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/ApplicationContextTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/ApplicationContextTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/AwareInterfaceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/AwareInterfaceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/BeanDefinitionAndBeanDefinitionRegistryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/BeanDefinitionAndBeanDefinitionRegistryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/BeanFactoryPostProcessorAndBeanPostProcessorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/BeanFactoryPostProcessorAndBeanPostProcessorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/CircularReferenceWithProxyBeanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/CircularReferenceWithProxyBeanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/EventAndEventListenerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/EventAndEventListenerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/XmlFileDefineBeanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/ioc/XmlFileDefineBeanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/springframework/test/service/HelloService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/springframework/test/service/HelloService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,31 +181,32 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Maven\MiniSpring\src\test\resources" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop" />
+      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\aop\framework" />
       <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\bean" />
       <recent name="E:\Maven\MiniSpring\src\test\java\org\springframework\test\common" />
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\core\convert" />
-      <recent name="E:\Maven\MiniSpring\src\main\java\org\springframework\beans\factory\annotation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.springframework.aop" />
+      <recent name="org.springframework.test.aop" />
+      <recent name="org.springframework.test.ioc" />
+      <recent name="org.springframework.test.common" />
       <recent name="org.springframework.aop.framework" />
-      <recent name="org.springframework.aop.framework.autoproxy" />
-      <recent name="org.springframework.beans.factory.support" />
-      <recent name="org.springframework.context.support" />
+      <recent name="org.springframework.aop.framework.adapter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CircularReferenceWithProxyBeanTest.testCircularReference">
-    <configuration name="CircularReferenceWithProxyBeanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AutoProxyTest.testAutoProxy">
+    <configuration name="AutoProxyTest.testAutoProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="PATTERN" value="org.springframework.test.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.CircularReferenceWithProxyBeanTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.AutoProxyTest" />
+      <option name="METHOD_NAME" value="testAutoProxy" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,7 +243,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypeConversionFirstPartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LazyInitTest.testLazyInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
@@ -136,34 +252,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.TypeConversionFirstPartTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.LazyInitTest" />
+      <option name="METHOD_NAME" value="testLazyInit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypeConversionSecondPartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProxyFactoryTest.testAdvisor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MiniSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.springframework.test.ioc.*" />
+          <option name="PATTERN" value="org.springframework.test.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.springframework.test.ioc" />
-      <option name="MAIN_CLASS_NAME" value="org.springframework.test.ioc.TypeConversionSecondPartTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.springframework.test.aop" />
+      <option name="MAIN_CLASS_NAME" value="org.springframework.test.aop.ProxyFactoryTest" />
+      <option name="METHOD_NAME" value="testAdvisor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AutoProxyTest.testAutoProxy" />
+        <item itemvalue="JUnit.ProxyFactoryTest.testAdvisor" />
+        <item itemvalue="JUnit.LazyInitTest.testLazyInit" />
         <item itemvalue="JUnit.CircularReferenceWithProxyBeanTest.testCircularReference" />
         <item itemvalue="JUnit.CircularReferenceWithoutProxyBeanTest.testCircularReference" />
-        <item itemvalue="JUnit.CircularReferenceWithProxyBeanTest" />
-        <item itemvalue="JUnit.TypeConversionSecondPartTest" />
-        <item itemvalue="JUnit.TypeConversionFirstPartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,8 +307,19 @@
       <workItem from="1706327180973" duration="5914000" />
       <workItem from="1706447921908" duration="3416000" />
       <workItem from="1706498468258" duration="8029000" />
-      <workItem from="1706587308931" duration="8185000" />
+      <workItem from="1706587308931" duration="10340000" />
+      <workItem from="1706755589741" duration="13904000" />
+      <workItem from="1706841601988" duration="11596000" />
+      <workItem from="1706928439879" duration="12852000" />
     </task>
+    <task id="LOCAL-00001" summary="解决循环依赖问题（二）：有代理对象">
+      <created>1706606592668</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706606592668</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,19 +370,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixup! 解决循环依赖问题（二）：有代理对象" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixup! 解决循环依赖问题（二）：有代理对象" />
+    <MESSAGE value="squash! 解决循环依赖问题（二）：有代理对象" />
+    <MESSAGE value="解决循环依赖问题（二）：有代理对象" />
+    <MESSAGE value="squash! 实现最简单的Bean容器" />
+    <option name="LAST_COMMIT_MESSAGE" value="squash! 实现最简单的Bean容器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/common/CustomerBeanPostProcessor.java</url>
-          <line>13</line>
+          <line>10</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/ApplicationContextTest.java</url>
-          <line>17</line>
+          <line>14</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -262,19 +394,109 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>134</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/ioc/CircularReferenceWithProxyBeanTest.java</url>
-          <line>17</line>
+          <line>14</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/aop/ProxyFactoryTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/aop/ProxyFactoryTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/CglibAopProxy.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/CglibAopProxy.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractRefreshableApplicationContext.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/springframework/test/aop/AutoProxyTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/springframework/aop/framework/autoproxy/DefaultAdvisorAutoProxyCreator.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

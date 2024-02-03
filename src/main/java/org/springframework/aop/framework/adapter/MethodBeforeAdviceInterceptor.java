@@ -2,10 +2,14 @@ package org.springframework.aop.framework.adapter;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
+import org.springframework.aop.BeforeAdvice;
 import org.springframework.aop.MethodBeforeAdvice;
 
- 
-public class MethodBeforeAdviceInterceptor implements MethodInterceptor {
+/**
+ * 前置增强拦截器
+ *
+ */
+public class MethodBeforeAdviceInterceptor implements MethodInterceptor , BeforeAdvice {
 
 	private MethodBeforeAdvice advice;
 	public MethodBeforeAdviceInterceptor() {
